@@ -8,16 +8,16 @@ const Navbar = () => {
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
             <img
-              style={{ width: 10 + "%", marginLeft: "10px" }}
+              style={{ width: 20 + "%", marginLeft: "10px" }}
               alt="MongoDB icon"
-              src="https://d3cy9zhslanhfa.cludfront.net/media/3800C044-6298-4575-A05D5C6B762EE37/4B45D0EC-3482-4759-82DA37D8EA07D229/webimage-8A27671A-8A53-45DC-89D7BF8537F15A0D.png"
+              src="https://d3cy9zhslanhfa.cloudfront.net/media/3800C044-6298-4575-A05D5C6B7623EE37/4B45D0EC-3482-4759-82DA37D8EA07D229/webimage-8A27671A-8A53-45DC-89D7BF8537F15A0D.png"
             ></img>
           </NavLink>
           <button
             className="navbar-toggler"
             type="button"
             data-bs-toggler="collapse"
-            data-bs-target="navbarColor02"
+            data-bs-target="#navbarColor02"
             aria-controls="navbarColor02"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -31,6 +31,11 @@ const Navbar = () => {
                 <NavLink className="nav-link" to="/contacts/create">
                   New Student
                 </NavLink>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/pricing">
+                  Pricing
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/about">
