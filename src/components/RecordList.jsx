@@ -34,8 +34,9 @@ export default function RecordList() {
   useEffect(() => {
     setLoading(true);
     async function getRecords() {
-      const response = await fetch();
-      //  `API goes here`
+      const response = await fetch(
+        `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9`
+      );
       console.log(response);
       setLoading(false);
       if (!response.ok) {
@@ -50,47 +51,50 @@ export default function RecordList() {
 
     getRecords();
   }, [records.length]);
-}
 
-// This method will delete a record
-async function deleteRecord(id) {
-  await fetch(``, {
-    method: "DELETE",
-  });
-
-  const newRecords = records.filter((el) => el.id !== id);
-  setRecords(newRecords);
-}
-
-// This method will map out the records on the table
-function recordList() {
-  return records.map((record) => {
-    return (
-      <record
-        record={record}
-        deleteRecord={() => deleteRecord(record._id)}
-        key={record._id}
-      />
+  // This method will delete a record
+  async function deleteRecord(id) {
+    await fetch(
+      `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9`,
+      {
+        method: "DELETE",
+      }
     );
-  });
-}
 
-// This following section will display the table with the rcords of indiividuals.
-return (
-  <div className="container">
-    <h3 className="contact-title">Contact List</h3>
-    <table className="table table-striped" style={{ marginTop: 20 }}>
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Email</th>
-          <th>Age</th>
-          <th>Current College</th>
-          <th>Modify Student</th>
-        </tr>
-      </thead>
-      <tbody>{recordList()}</tbody>
-    </table>
-  </div>
-);
+    const newRecords = records.filter((el) => el.id !== id);
+    setRecords(newRecords);
+  }
+
+  // This method will map out the records on the table
+  function recordList() {
+    return records.map((record) => {
+      return (
+        <record
+          record={record}
+          deleteRecord={() => deleteRecord(record._id)}
+          key={record._id}
+        />
+      );
+    });
+  }
+
+  // This following section will display the table with the rcords of indiividuals.
+  return (
+    <div className="container">
+      <h3 className="contact-title">Contact List</h3>
+      <table className="table table-striped" style={{ marginTop: 20 }}>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Current College</th>
+            <th>Modify Student</th>
+          </tr>
+        </thead>
+        <tbody>{recordList()}</tbody>
+      </table>
+    </div>
+  );
+}

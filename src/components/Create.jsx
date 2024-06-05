@@ -25,13 +25,16 @@ export default function Create() {
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
 
-    await fetch("API goes here", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newPerson),
-    }).catch((error) => {
+    await fetch(
+      "Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newPerson),
+      }
+    ).catch((error) => {
       window.alert(error);
       return;
     });
@@ -62,7 +65,57 @@ export default function Create() {
           />
         </div>
 
-        <div className="form-group"></div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            className="form-control"
+            id="lastName"
+            value={form.lastName}
+            onChange={(e) => updateForm({ lastName: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            className="form-control"
+            id="email"
+            value={form.email}
+            onChange={(e) => updateForm({ email: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="age">Age</label>
+          <input
+            type="text"
+            className="form-control"
+            id="age"
+            value={form.age}
+            onChange={(e) => updateForm({ age: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="currentCollege">Current College</label>
+          <input
+            type="text"
+            className="form-control"
+            id="currentCollege"
+            value={form.currentCollege}
+            onChange={(e) => updateForm({ currentCollege: e.target.value })}
+          />
+        </div>
+
+        <div className="form-group" style={{ marginTop: "10px" }}>
+          <input
+            type="submit"
+            value="Create Contact"
+            className="btn btn-primary"
+          />
+        </div>
       </form>
     </div>
   );
