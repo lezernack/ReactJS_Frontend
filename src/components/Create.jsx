@@ -26,7 +26,8 @@ export default function Create() {
     const newPerson = { ...form };
 
     await fetch(
-      "Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9",
+      `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
+
       {
         method: "POST",
         headers: {

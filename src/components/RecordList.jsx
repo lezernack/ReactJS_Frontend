@@ -36,7 +36,7 @@ export default function RecordList() {
     setLoading(true);
     async function getRecords() {
       const response = await fetch(
-        `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9`
+        `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
       );
       console.log(response);
       setLoading(false);
@@ -56,7 +56,7 @@ export default function RecordList() {
   // This method will delete a record
   async function deleteRecord(id) {
     await fetch(
-      `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9`,
+      `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
       {
         method: "DELETE",
       }

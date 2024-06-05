@@ -19,7 +19,8 @@ export default function Edit() {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9/{params.id.toString()}`
+        `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0,
+      /{params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -62,7 +63,7 @@ export default function Edit() {
 
     // This will send a post request to update the data in the database.
     await fetch(
-      `Kv0wKnA4F6aqx5m2zYSs7g3aBWpI8owZlUSlf6ub9TttRMDIZ6znmUFRtHD1iOO9/${params.id}`,
+      `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0,/${params.id}`,
       {
         method: "PUT",
         body: JSON.stringify(editedPerson),
