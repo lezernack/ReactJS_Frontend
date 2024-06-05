@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
 export default function Edit() {
-  const [from, setForm] = useState({
+  const [form, setForm] = useState({
     firstName: "",
     lastName: "",
     email: "",

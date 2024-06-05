@@ -29,6 +29,9 @@ const Record = (props) => (
 export default function RecordList() {
   const [loading, setLoading] = useState(true);
   const [records, setRecords] = useState([]);
+  {
+    loading ? <Loader /> : recordList();
+  }
 
   // This method fetches the records from the database.
   useEffect(() => {
