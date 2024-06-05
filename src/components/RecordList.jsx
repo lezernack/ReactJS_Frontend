@@ -72,7 +72,7 @@ export default function RecordList() {
   function recordList() {
     return records.map((record) => {
       return (
-        <record
+        <Record
           record={record}
           deleteRecord={() => deleteRecord(record._id)}
           key={record._id}
