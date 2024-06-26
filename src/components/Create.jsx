@@ -26,7 +26,7 @@ export default function Create() {
     const newPerson = { ...form };
 
     await fetch(
-      `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
+      `https://node-api-project-vhol.onrender.com`,
 
       {
         method: "POST",

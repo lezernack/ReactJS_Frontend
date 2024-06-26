@@ -36,7 +36,7 @@ export default function RecordList() {
     setLoading(true);
     async function getRecords() {
       const response = await fetch(
-        `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+        `https://node-api-project-vhol.onrender.com`
       );
       console.log(response);
       setLoading(false);
@@ -55,12 +55,9 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(
-      `mongodb+srv://luksezck:dashAttack@cluster0.vyknf6q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
-      {
-        method: "DELETE",
-      }
-    );
+    await fetch(`https://node-api-project-vhol.onrender.com`, {
+      method: "DELETE",
+    });
 
     const newRecords = records.filter((el) => el.id !== id);
     setRecords(newRecords);
