@@ -13,12 +13,14 @@ export default function Edit() {
   const params = useParams();
   const navigate = useNavigate();
 
-  // text line.
+  // test line.
 
   useEffect(() => {
     async function fetchData() {
       const id = params.id.toString();
-      const response = await fetch(`http://localhost:3000/students/edit/:id`);
+      const response = await fetch(
+        `https://node-api-project-vhol.onrender.com/edit/{params.id.toString()}`
+      );
 
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -59,18 +61,21 @@ export default function Edit() {
     };
 
     // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:3000/students/edit/${params.id}`, {
-      method: "PUT",
-      body: JSON.stringify(editedPerson),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    await fetch(
+      `https://node-api-project-vhol.onrender.com/edit/:id${params.id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(editedPerson),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     navigate("/");
   }
 
-  // This following section will display the form that takes input from the user to update the date.
+  // This following section will display the form that takes input from the user to update the data.
   return (
     <div>
       <h3>Update Record</h3>
@@ -129,7 +134,7 @@ export default function Edit() {
         </div>
 
         <br />
-        <div className="from-group">
+        <div className="form-group">
           <input
             type="submit"
             value="Update Record"

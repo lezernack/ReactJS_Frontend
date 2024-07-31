@@ -16,7 +16,7 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggler="collapse"
+            data-bs-toggle="collapse"
             data-bs-target="#navbarColor02"
             aria-controls="navbarColor02"
             aria-expanded="false"
@@ -28,7 +28,7 @@ const Navbar = () => {
             <ul className="navbar-nav me-auto">
               <li className="nav-item"></li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contacts/create">
+                <NavLink className="nav-link" to="/create">
                   New Student
                 </NavLink>
               </li>

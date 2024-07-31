@@ -10,7 +10,10 @@ const Record = (props) => (
     <td>{props.record.age}</td>
     <td>{props.record.currentCollege}</td>
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
+      <Link
+        className="btn btn-link"
+        to={`https://node-api-project-vhol.onrender.com/edit/${props.record._id}`}
+      >
         Edit
       </Link>
 
@@ -34,7 +37,9 @@ export default function RecordList() {
   useEffect(() => {
     setLoading(true);
     async function getRecords() {
-      const response = await fetch(`http://localhost:3000/students`);
+      const response = await fetch(
+        `https://node-api-project-vhol.onrender.com/students`
+      );
       console.log(response);
       setLoading(false);
       if (!response.ok) {
@@ -52,7 +57,7 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`localhost:3000/students/delete`, {
+    await fetch(`https://node-api-project-vhol.onrender.com/delete/:id`, {
       method: "DELETE",
     });
 
