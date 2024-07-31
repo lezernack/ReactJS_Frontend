@@ -29,15 +29,12 @@ const Record = (props) => (
 export default function RecordList() {
   const [loading, setLoading] = useState(true);
   const [records, setRecords] = useState([]);
-  loading ? <Loader /> : recordList();
 
   // This method fetches the records from the database.
   useEffect(() => {
     setLoading(true);
     async function getRecords() {
-      const response = await fetch(
-        `https://node-api-project-vhol.onrender.com`
-      );
+      const response = await fetch(`http://localhost:3000/students`);
       console.log(response);
       setLoading(false);
       if (!response.ok) {
@@ -55,7 +52,7 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`https://node-api-project-vhol.onrender.com`, {
+    await fetch(`localhost:3000/students/delete`, {
       method: "DELETE",
     });
 
@@ -91,7 +88,7 @@ export default function RecordList() {
             <th>Modify Student</th>
           </tr>
         </thead>
-        <tbody>{recordList()}</tbody>
+        <tbody>{loading ? <Loader /> : recordList()}</tbody>
       </table>
     </div>
   );
