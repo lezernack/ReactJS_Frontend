@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
+import "./student.css";
 
 export default function Edit() {
   const [form, setForm] = useState({
@@ -135,11 +136,7 @@ export default function Edit() {
 
         <br />
         <div className="form-group">
-          <input
-            type="submit"
-            value="Update Record"
-            className="btn btn-primary"
-          />
+          <input type="submit" value="Update Record" className="btn-primary" />
         </div>
       </form>
     </div>

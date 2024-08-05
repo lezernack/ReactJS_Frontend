@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import "./student.css";
 
 export default function Create() {
   const [form, setForm] = useState({
@@ -107,11 +108,7 @@ export default function Create() {
         </div>
 
         <div className="form-group" style={{ marginTop: "10px" }}>
-          <input
-            type="submit"
-            value="Create Student"
-            className="btn btn-primary"
-          />
+          <input type="submit" value="Create Student" className="btn-primary" />
         </div>
       </form>
     </div>

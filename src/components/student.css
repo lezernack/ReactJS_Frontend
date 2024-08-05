@@ -1,6 +1,6 @@
 .btn-link-edit {
-  color: black;
-  background-color: yellow;
+  color: rgb(49, 48, 48);
+  background-color: green;
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -8,6 +8,7 @@
   padding-right: 15px;
   margin: auto;
   margin-right: 10px;
+  font-weight: bold;
   text-decoration: underline;
   flex-wrap: nowrap;
   border: 2px solid black;
@@ -16,13 +17,14 @@
 }
 
 .btn-link-delete {
-  color: black;
-  background-color: red;
+  color: green;
+  background-color: rgb(49, 48, 48);
   padding: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin: auto;
   margin-left: 10px;
+  font-weight: bold;
   text-decoration: underline;
   flex-wrap: nowrap;
   border: 2px solid black;
@@ -30,6 +32,11 @@
   display: inline-block;
 }
 
-.btn-link:hover {
-  color: red;
+.btn-primary {
+  color: green;
+  background-color: rgb(49, 48, 48);
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 20px;
 }
