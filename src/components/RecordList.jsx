@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "./Loader/Loader";
+import "./student.css";
 
 const Record = (props) => (
   <tr>
@@ -10,12 +11,12 @@ const Record = (props) => (
     <td>{props.record.age}</td>
     <td>{props.record.currentCollege}</td>
     <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
+      <Link className="btn-link-edit" to={`/edit/${props.record._id}`}>
         Edit
       </Link>
       |
       <button
-        className="btn btn-link"
+        className="btn-link-delete"
         onClick={() => {
           props.deleteRecord(props.record._id);
         }}
@@ -78,7 +79,7 @@ export default function RecordList() {
   // This following section will display the table with the rcords of indiividuals.
   return (
     <div className="container">
-      <h3 className="contact-title">Student List</h3>
+      <h3 className="contact-title text-center">Student List</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <thead>
           <tr>

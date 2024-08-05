@@ -1,0 +1,35 @@
+.btn-link-edit {
+  color: black;
+  background-color: yellow;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  margin-right: 10px;
+  text-decoration: underline;
+  flex-wrap: nowrap;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.btn-link-delete {
+  color: black;
+  background-color: red;
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+  margin-left: 10px;
+  text-decoration: underline;
+  flex-wrap: nowrap;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.btn-link:hover {
+  color: red;
+}
