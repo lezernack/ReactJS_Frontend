@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/" element={<RecordList />} />
         <Route exact path="/create" element={<Create />} />
         <Route exact path="/edit/:id" element={<Edit />} />
-        <Route exact path="/delete/:id" element={<RecordList />} />
+        <Route exact path="/:id" element={<RecordList />} />
       </Routes>
     </div>
   );

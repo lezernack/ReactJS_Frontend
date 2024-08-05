@@ -10,10 +10,7 @@ const Record = (props) => (
     <td>{props.record.age}</td>
     <td>{props.record.currentCollege}</td>
     <td>
-      <Link
-        className="btn btn-link"
-        to={`https://node-api-project-vhol.onrender.com/edit/${props.record._id}`}
-      >
+      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
         Edit
       </Link>
 
@@ -57,7 +54,7 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`https://node-api-project-vhol.onrender.com/delete/:id`, {
+    await fetch(`https://node-api-project-vhol.onrender.com/:id`, {
       method: "DELETE",
     });
 
@@ -81,7 +78,7 @@ export default function RecordList() {
   // This following section will display the table with the rcords of indiividuals.
   return (
     <div className="container">
-      <h3 className="contact-title">Contact List</h3>
+      <h3 className="contact-title">Student List</h3>
       <table className="table table-striped" style={{ marginTop: 20 }}>
         <thead>
           <tr>

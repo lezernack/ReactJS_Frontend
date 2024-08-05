@@ -15,11 +15,11 @@ export default function Edit() {
 
   // test line.
 
-  useEffect(() => {
+  /*  useEffect(() => {
     async function fetchData() {
       const id = params.id.toString();
       const response = await fetch(
-        `https://node-api-project-vhol.onrender.com/edit/{params.id.toString()}`
+        `https://node-api-project-vhol.onrender.com/students/{params.id.toString()}`
       );
 
       if (!response.ok) {
@@ -41,7 +41,7 @@ export default function Edit() {
     fetchData();
 
     return;
-  }, [params.id, navigate]);
+  }, [params.id, navigate]); */
 
   // These methods will update the state properties.
   function updateForm(value) {
@@ -62,7 +62,7 @@ export default function Edit() {
 
     // This will send a post request to update the data in the database.
     await fetch(
-      `https://node-api-project-vhol.onrender.com/edit/:id${params.id}`,
+      `https://node-api-project-vhol.onrender.com/students/edit/${params.id}`,
       {
         method: "PUT",
         body: JSON.stringify(editedPerson),
@@ -112,7 +112,7 @@ export default function Edit() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="age">Music Genre</label>
+          <label htmlFor="age">Age : </label>
           <input
             type="text"
             className="form-control"
@@ -123,7 +123,7 @@ export default function Edit() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="currentCollege">Current College</label>
+          <label htmlFor="currentCollege">Current College :</label>
           <input
             type="text"
             className="form-control"
