@@ -13,7 +13,7 @@ const Record = (props) => (
       <Link className="btn btn-link" to={`/edit/${props.record._id}`}>
         Edit
       </Link>
-
+      |
       <button
         className="btn btn-link"
         onClick={() => {
@@ -54,11 +54,11 @@ export default function RecordList() {
 
   // This method will delete a record
   async function deleteRecord(id) {
-    await fetch(`https://node-api-project-vhol.onrender.com/:id`, {
+    await fetch(`https://node-api-project-vhol.onrender.com/students/${id}`, {
       method: "DELETE",
     });
 
-    const newRecords = records.filter((el) => el.id !== id);
+    const newRecords = records.filter((el) => el._id !== id);
     setRecords(newRecords);
   }
 
